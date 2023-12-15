@@ -1,0 +1,110 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+	
+}
+
+#clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 583px;
+    height: 466px;
+    background: url('hugologo.png') center/cover no-repeat; 
+
+}
+
+.hand {
+    position: absolute;
+    left: 50.5%;
+    bottom: 50%; 
+    transform-origin: 50% 100%; 
+    transition: transform 0.5s cubic-bezier(0.4, 2.4, 0.55, 0.9);
+}
+
+#hour,
+#minute,
+#second {
+    margin-left: -5px; 
+    position: absolute;
+    border: 1px solid transparent; 
+}
+
+#hour {
+    height: 95px;
+    width: 10px;
+    background-color: #ff1800;
+    border-color: #930d01; 
+    border-radius: 5px; 
+    z-index: 1; /* hour hand is at the bottom */
+}
+
+#minute {
+    height: 120px;
+    width: 7px;
+    background-color: #000ff9;
+    border-color: #1d197b; 
+    border-radius: 5px; 
+    z-index: 2; /* minute is at the middle */
+}
+
+#second {
+    height: 183px;
+    width: 5px;
+    background-color: #00d700;
+    border-color: #337551; 
+    border-radius: 5px; 
+    z-index: 3; /* top */
+}
+
+@media only screen and (max-width: 583px) {
+	
+    #clock {
+    width: 320px;
+    height: 256px;
+    }
+	
+	
+	#hour {
+    height: 45px;
+	width: 7px;
+   
+	}
+	#minute {
+    height: 65px;
+	width: 5px;
+	}
+
+	#second {
+    height: 85px;
+	width: 3px;
+	}
+
+@media only screen and (max-width: 320px) {
+	
+    #clock {
+       width: 180px;
+    height: 144px;
+    }
+	
+	#hour {
+    height: 35px;
+   
+	}
+	#minute {
+    height: 55px;
+	}
+
+	#second {
+    height: 65px;
+	}
+}
+
+
+
